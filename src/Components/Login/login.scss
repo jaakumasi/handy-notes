@@ -14,8 +14,10 @@ $sign_up_span: rgb(210, 223, 30);
     .login_form {
         display: flex;
         @media screen and (max-width: 768px) {
+            max-width: 95%;
             flex-direction: column-reverse;
             margin: auto;
+            margin-bottom: 25px;
         }
         .input_section{
             position: relative;

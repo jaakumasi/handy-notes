@@ -20,11 +20,13 @@
 
 @media screen and (max-width: 768px) {
   .login_container .login_form {
+    max-width: 95%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin: auto;
+    margin-bottom: 25px;
   }
 }
 
