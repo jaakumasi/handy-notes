@@ -1,0 +1,237 @@
+$header-background: rgb(0, 154, 206);
+$search_icon_color: rgb(0, 154, 206);
+$menu_icon_active_background: rgb(19, 88, 179);
+
+.notes_container {
+    height: 50vh;
+    min-height: 100vh;
+    overflow: hidden;
+    .container {
+        position: relative;
+        height: 100vh;
+        max-width: 55%;
+        overflow: hidden;
+        background-color: rgba(252, 252, 252, 0.815);
+        box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+        @media screen and (max-width: 912px) {
+            min-width: 90%;
+        }
+        @media screen and (max-width: 768px) {
+            min-width: 100%;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            padding: 10px;
+            color: white;
+            background-color: $header-background;
+            box-shadow: 0 3px 7px #666;
+            display: flex;
+            .logo_and_site_name {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .logo {
+                    font-size: 130%;
+                    transform: translateY(-3px);
+                    margin-right: 10px;
+                }
+                .site_name {
+                    font-family: 'handy notes';
+                    font-size: 135%;
+                    letter-spacing: 1px;
+                }
+            }
+            .user_and_menu_icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 768px) {
+                    justify-content: end;
+                }
+                .user_name {
+                    font-family: 'noto sans regular';
+                    margin: 3px 35px 0 0;
+                    width: 35%;
+                }
+                .menu_icon {
+                    font-size: 170%;
+                    background-color: rgb(19, 88, 179);
+                    border-radius: 4px;
+                    padding: 5px;
+                    @media screen and (max-width: 768px) {
+                        margin-left: 0px;
+                        margin-right: 10px;
+                    }
+                    &:active {
+                        background-color: rgb(29, 50, 78);
+                    }
+                }
+            }
+        }
+        .success_toast {
+            position: absolute;
+            top: 60px;
+            left: auto;
+            width: fit-content;
+            color: white;
+            font-weight: bold;
+        }
+        .menu {
+            position: absolute;
+            right: 0px;
+            top: 51px;
+            z-index: 20;
+            padding: 10px;
+            border-bottom-left-radius: 12px;
+            font-size: 90%;
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+            transition: 250ms;
+            transform: scale(0);
+            font-family: 'noto sans regular';
+            background-color: $menu_icon_active_background;
+            &.active {
+                transition: 200ms;
+                opacity: 1;
+                transform: scale(1);
+                width: fit-content;
+                height: fit-content;
+            }
+            * { // make cursor a pointer when hovered on any menu item
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            ul {
+                padding: 10px;
+                color: aliceblue;
+            }
+            ul li {
+                list-style: none;
+                margin: 10px 0;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    &:hover {
+                        color: rgb(213, 218, 213);
+                    }
+                }
+                .drop_contacts {
+                    &:hover {
+                        color: rgb(213, 218, 213);
+                    }
+                    &:active {
+                        color: $search_icon_color;
+                    }
+                    span { 
+                        margin-left: 3px;
+                        font-size: 115%;
+                    }
+                }
+                .developer_contact_dropdown {   // hide developer contact dropdown
+                    * {
+                        margin: 5px 0;
+                    }
+                    display: none;
+                    margin-left: 15px;
+                    div {
+                        &:hover {
+                            color: rgb(213, 218, 213);
+                        }
+                        &:active {  // change dropdown items text color on click
+                            color: $search_icon_color;
+                        }
+                    }
+                    .icon { // email, whatsapp, telegram icons
+                        margin-right: 10px;
+                        &:hover {
+                            color: rgb(213, 218, 213)!important;
+                        }
+                    }
+                    &.active {      // only show when active
+                        display: block;
+                    }
+                }
+                .logout {  
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        color: rgb(213, 218, 213);
+                    }
+                    &:active {  // change logout text color on click
+                        color: $search_icon_color;
+                    }
+                }
+            }
+        }
+        .search_box {   
+            position: relative;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            @media screen and (max-width: 768px) {
+                font-style: 200%;
+            }
+            &:hover {
+                cursor: text!important;
+            }
+            .search_icon {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                color: $search_icon_color!important;
+            }
+            input {
+                padding: 4px 40px 4px 15px;
+                border-radius: 2px;
+            }
+        }
+        .add_note {
+            position: absolute;
+            bottom: calc(1.5vh);
+            right: 25px;
+            opacity: 90%;
+            width: fit-content;
+            background-color: rgb(59, 117, 241);
+            font-family: 'noto sans regular';
+            border-radius: 5px;
+            padding: 5px 25px; 
+            &:active {
+                color: rgb(59, 117, 241);
+                background-color: white;
+                border: 1px solid rgb(59, 117, 241);
+                box-shadow:  0 0 0 white;
+            }
+        }
+        .no_notes {
+            margin-top: calc(40vh);
+            font-family: 'noto sans regular';
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            .inner_div {
+                border: 1px dashed rgba(45, 45, 207, 0.432);
+                border-radius: 5px;
+                padding: 20px;
+                .text {
+                    padding-bottom: 7px;
+                    margin-bottom: 10px;
+                    border-width: 0 0 1px 0;
+                    border-style: solid;
+                    border-color: rgba(45, 45, 207, 0.432);;
+                }
+                button {
+                    font-size: 80%;
+                    width: 100%;
+                }
+            }
+        }
+        .notes_list {
+            margin-top: 75px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+    }
+}

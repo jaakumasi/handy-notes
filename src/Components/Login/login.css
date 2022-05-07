@@ -1,0 +1,223 @@
+.login_container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_container .login_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .login_container .login_form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: auto;
+  }
+}
+
+.login_container .login_form .input_section {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  min-width: 300px;
+  -webkit-box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.719);
+          box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.719);
+}
+
+.login_container .login_form .input_section .toast {
+  position: absolute;
+  top: -52px;
+  left: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.login_container .login_form .input_section .handy_notes, .login_container .login_form .input_section .sign_up_text {
+  font-family: 'handy notes';
+  font-size: 170%;
+  color: #d3d313;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.login_container .login_form .input_section .handy_notes.sign_up_text, .login_container .login_form .input_section .sign_up_text.sign_up_text {
+  color: #0b9ecf;
+  font-size: 160%;
+}
+
+.login_container .login_form .input_section .logo {
+  text-align: center;
+  color: #d3d313;
+  margin: 4px 0 8px 0;
+}
+
+.login_container .login_form .input_section input {
+  margin-top: -6px;
+  padding-left: 45px;
+  background-color: rgba(243, 243, 243, 0.966);
+  border-color: #ece5e5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 90%;
+}
+
+.login_container .login_form .input_section input:focus {
+  -webkit-box-shadow: 0 0 0 2px #d3d313;
+          box-shadow: 0 0 0 2px #d3d313;
+}
+
+.login_container .login_form .input_section .form_group {
+  margin-bottom: 10px;
+}
+
+.login_container .login_form .input_section .form_group label {
+  font-weight: 500;
+  font-size: 90%;
+}
+
+.login_container .login_form .input_section .form_group .logo_input {
+  position: relative;
+}
+
+.login_container .login_form .input_section .form_group .logo_input .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: cadetblue;
+}
+
+.login_container .login_form .input_section button {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 15px 0 6px 0;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.login_container .login_form .input_section button:focus {
+  -webkit-box-shadow: 0 0 0 0px blue;
+          box-shadow: 0 0 0 0px blue;
+}
+
+.login_container .login_form .input_section .spinner {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.login_container .login_form .input_section .sign_in {
+  border-color: #d3d313;
+  color: #d3d313;
+}
+
+.login_container .login_form .input_section .sign_in:active {
+  background-color: #d3d313;
+  color: white;
+}
+
+.login_container .login_form .input_section .sign_up {
+  border-color: #0b9ecf;
+  color: #0b9ecf;
+}
+
+.login_container .login_form .input_section .sign_up:active {
+  background-color: #0b9ecf;
+  color: white;
+}
+
+.login_container .login_form .input_section .signup_div {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 90%;
+}
+
+.login_container .login_form .input_section .signup_div span {
+  font-weight: 400;
+  font-size: 110%;
+}
+
+.login_container .login_form .input_section .signup_div span .sign_up_span {
+  color: #d2df1e;
+}
+
+.login_container .login_form .input_section .signup_div span .sign_up_span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login_container .login_form .input_section .signup_div span .sign_in_span {
+  color: #009ace;
+}
+
+.login_container .login_form .input_section .signup_div span .sign_in_span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login_container .login_form .info_section {
+  height: 100%;
+  padding: 20px;
+  color: white;
+  background-color: #009ace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+          box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+}
+
+@media screen and (max-width: 768px) {
+  .login_container .login_form .info_section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-width: 100%;
+  }
+}
+
+.login_container .login_form .info_section .logo {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.login_container .login_form .info_section .hello {
+  font-size: 205%;
+  font-family: 'handy notes';
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.login_container .login_form .info_section .description {
+  font-size: 15px;
+  line-height: -2px;
+}
+
+.login_container .login_form .info_section .description span {
+  font-family: 'handy notes';
+  letter-spacing: 1px;
+  font-size: 120%;
+}
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'handy notes';
+    src: url('./fonts/notes.otf');
+}
+@font-face {
+    font-family: 'body';
+    src: url('./fonts/NotoSans-Condensed.ttf');
+}
+@font-face {
+    font-family: 'note font';
+    src: url('./fonts/Nexa\ Light.otf');
+}
+@font-face {
+    font-family: 'user font';
+    src: url('./fonts/NEXT\ ART_SemiBold.otf');
+}
+@font-face {
+    font-family: 'noto sans regular';
+    src: url('./fonts/NotoSans-Regular.ttf');
+}
+
+.App {
+    overflow-x: hidden;
+    background: linear-gradient(30deg, rgb(194, 222, 231), lightblue);
+}

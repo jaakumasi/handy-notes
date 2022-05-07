@@ -1,0 +1,170 @@
+$focused_input_border_color: rgb(211, 211, 19);
+$focused_input_icon_color: rgb(211, 211, 19);
+$login_button_color: rgb(211, 211, 19);
+$signup_button_color: rgb(11, 158, 207);
+$info_section_background_color: rgb(0, 154, 206);
+$sign_up_span: rgb(210, 223, 30);
+
+.login_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login_form {
+        display: flex;
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+            margin: auto;
+        }
+        .input_section{
+            position: relative;
+            background-color: white;
+            padding: 20px;
+            min-width: 300px;
+            box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.719);
+            .toast {
+                position: absolute;
+                top: -52px;
+                left: 0;
+                color: white;
+                font-weight: bold;
+            }
+            .handy_notes, .sign_up_text {
+                font-family: 'handy notes';
+                font-size: 170%;
+                color: $login_button_color;
+                letter-spacing: 1px;
+                text-align: center;
+                &.sign_up_text {
+                    color: $signup_button_color;
+                    font-size: 160%;
+                }
+            }
+            .logo {
+                text-align: center;
+                color: $login_button_color;
+                margin: 4px 0 8px 0;
+            }
+            input {
+                margin-top: -6px;
+                padding-left: 45px;
+                background-color: rgba(243, 243, 243, 0.966);
+                border-color: rgb(236, 229, 229);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 90%;
+                &:focus {
+                    box-shadow: 0 0 0 2px $focused_input_border_color;
+                }
+            }
+            .form_group {
+                margin-bottom: 10px;
+                label {
+                    font-weight: 500;
+                    font-size: 90%;
+                }
+                .logo_input {
+                    position: relative;
+                    .icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 15px;
+                        transform: translateY(-50%);
+                        color: cadetblue;
+                     }
+                }
+            }
+            button {
+                position: relative;
+                width: 100%;
+                padding: 5px;
+                margin: 15px 0 6px 0;
+                font-weight: 500;
+                background-color: white;
+                border-radius: 30px;
+                &:focus {
+                    box-shadow: 0 0 0 0px blue; // remove box shadow when button gets focus
+                }
+            }
+            .spinner {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            .sign_in {
+                border-color: $login_button_color;
+                color: $login_button_color;
+                &:active {
+                    background-color: $login_button_color;
+                    color: white;
+                }
+            }
+            .sign_up {
+                border-color: $signup_button_color;
+                color: $signup_button_color;
+                &:active {
+                    background-color: $signup_button_color;
+                    color: white;
+                }
+            }
+            .signup_div {
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 90%;
+                span {
+                    font-weight: 400;
+                    font-size: 110%;
+                    .sign_up_span {
+                        color: $sign_up_span;
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                    .sign_in_span {
+                        color: $info_section_background_color;
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .info_section{
+            height: 100%;
+            padding: 20px;
+            color: white;
+            background-color: $info_section_background_color; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+            @media screen and (max-width: 768px) {
+                height: fit-content;
+                min-width: 100%;
+            }
+            .logo {
+                margin-bottom: 20px;
+                font-size: 40px;
+            }
+            .hello {
+                font-size: 205%;
+                font-family: 'handy notes';
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+            .description {
+                font-size: 15px;
+                line-height: -2px;
+                span {
+                    font-family: 'handy notes';
+                    letter-spacing: 1px;
+                    font-size: 120%;
+                }
+            }
+        }
+    }
+}

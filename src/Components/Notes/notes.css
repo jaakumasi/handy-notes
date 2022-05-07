@@ -1,0 +1,321 @@
+.notes_container {
+  height: 50vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.notes_container .container {
+  position: relative;
+  height: 100vh;
+  max-width: 55%;
+  overflow: hidden;
+  background-color: rgba(252, 252, 252, 0.815);
+  -webkit-box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+          box-shadow: 0px 3px 10px rgba(102, 102, 102, 0.877);
+}
+
+@media screen and (max-width: 912px) {
+  .notes_container .container {
+    min-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notes_container .container {
+    min-width: 100%;
+  }
+}
+
+.notes_container .container .header {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 10px;
+  color: white;
+  background-color: #009ace;
+  -webkit-box-shadow: 0 3px 7px #666;
+          box-shadow: 0 3px 7px #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notes_container .container .header .logo_and_site_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.notes_container .container .header .logo_and_site_name .logo {
+  font-size: 130%;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  margin-right: 10px;
+}
+
+.notes_container .container .header .logo_and_site_name .site_name {
+  font-family: 'handy notes';
+  font-size: 135%;
+  letter-spacing: 1px;
+}
+
+.notes_container .container .header .user_and_menu_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .notes_container .container .header .user_and_menu_icon {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+.notes_container .container .header .user_and_menu_icon .user_name {
+  font-family: 'noto sans regular';
+  margin: 3px 35px 0 0;
+  width: 35%;
+}
+
+.notes_container .container .header .user_and_menu_icon .menu_icon {
+  font-size: 170%;
+  background-color: #1358b3;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .notes_container .container .header .user_and_menu_icon .menu_icon {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+}
+
+.notes_container .container .header .user_and_menu_icon .menu_icon:active {
+  background-color: #1d324e;
+}
+
+.notes_container .container .success_toast {
+  position: absolute;
+  top: 60px;
+  left: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  font-weight: bold;
+}
+
+.notes_container .container .menu {
+  position: absolute;
+  right: 0px;
+  top: 51px;
+  z-index: 20;
+  padding: 10px;
+  border-bottom-left-radius: 12px;
+  font-size: 90%;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  font-family: 'noto sans regular';
+  background-color: #1358b3;
+}
+
+.notes_container .container .menu.active {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.notes_container .container .menu *:hover {
+  cursor: pointer;
+}
+
+.notes_container .container .menu ul {
+  padding: 10px;
+  color: aliceblue;
+}
+
+.notes_container .container .menu ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.notes_container .container .menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.notes_container .container .menu ul li a:hover {
+  color: #d5dad5;
+}
+
+.notes_container .container .menu ul li .drop_contacts:hover {
+  color: #d5dad5;
+}
+
+.notes_container .container .menu ul li .drop_contacts:active {
+  color: #009ace;
+}
+
+.notes_container .container .menu ul li .drop_contacts span {
+  margin-left: 3px;
+  font-size: 115%;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown {
+  display: none;
+  margin-left: 15px;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown * {
+  margin: 5px 0;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown div:hover {
+  color: #d5dad5;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown div:active {
+  color: #009ace;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown .icon {
+  margin-right: 10px;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown .icon:hover {
+  color: #d5dad5 !important;
+}
+
+.notes_container .container .menu ul li .developer_contact_dropdown.active {
+  display: block;
+}
+
+.notes_container .container .menu ul li .logout {
+  color: white;
+  text-decoration: none;
+}
+
+.notes_container .container .menu ul li .logout:hover {
+  color: #d5dad5;
+}
+
+.notes_container .container .menu ul li .logout:active {
+  color: #009ace;
+}
+
+.notes_container .container .search_box {
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 768px) {
+  .notes_container .container .search_box {
+    font-style: 200%;
+  }
+}
+
+.notes_container .container .search_box:hover {
+  cursor: text !important;
+}
+
+.notes_container .container .search_box .search_icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #009ace !important;
+}
+
+.notes_container .container .search_box input {
+  padding: 4px 40px 4px 15px;
+  border-radius: 2px;
+}
+
+.notes_container .container .add_note {
+  position: absolute;
+  bottom: calc(1.5vh);
+  right: 25px;
+  opacity: 90%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #3b75f1;
+  font-family: 'noto sans regular';
+  border-radius: 5px;
+  padding: 5px 25px;
+}
+
+.notes_container .container .add_note:active {
+  color: #3b75f1;
+  background-color: white;
+  border: 1px solid #3b75f1;
+  -webkit-box-shadow: 0 0 0 white;
+          box-shadow: 0 0 0 white;
+}
+
+.notes_container .container .no_notes {
+  margin-top: calc(40vh);
+  font-family: 'noto sans regular';
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.notes_container .container .no_notes .inner_div {
+  border: 1px dashed rgba(45, 45, 207, 0.432);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.notes_container .container .no_notes .inner_div .text {
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgba(45, 45, 207, 0.432);
+}
+
+.notes_container .container .no_notes .inner_div button {
+  font-size: 80%;
+  width: 100%;
+}
+
+.notes_container .container .notes_list {
+  margin-top: 75px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+/*# sourceMappingURL=notes.css.map */
