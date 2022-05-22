@@ -31,6 +31,7 @@
 }
 
 .login_container .login_form .input_section {
+  z-index: 30;
   position: relative;
   background-color: white;
   padding: 20px;
@@ -179,6 +180,7 @@
 }
 
 .login_container .login_form .info_section {
+  z-index: 20;
   height: 100%;
   padding: 20px;
   color: white;

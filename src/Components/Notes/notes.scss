@@ -3,11 +3,10 @@ $search_icon_color: rgb(0, 154, 206);
 $menu_icon_active_background: rgb(19, 88, 179);
 
 .notes_container {
-    // height: 50vh;
     min-height: 100vh;
     overflow: hidden;
     .container {
-        position: relative!important;
+        position: relative;
         height: 100vh;
         max-width: 55%;
         overflow: hidden;
@@ -20,7 +19,7 @@ $menu_icon_active_background: rgb(19, 88, 179);
             min-width: 100%;
         }
         .header {
-            position: absolute;
+            position: fixed;
             top: 0;
             z-index: 10;
             padding: 10px;

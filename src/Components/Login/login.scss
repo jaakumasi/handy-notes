@@ -20,6 +20,7 @@ $sign_up_span: rgb(210, 223, 30);
             margin-bottom: 25px;
         }
         .input_section{
+            z-index: 30;
             position: relative;
             background-color: white;
             padding: 20px;
@@ -138,6 +139,7 @@ $sign_up_span: rgb(210, 223, 30);
             
         }
         .info_section{
+            z-index: 20;
             height: 100%;
             padding: 20px;
             color: white;
