@@ -26,7 +26,7 @@
 }
 
 .notes_container .container .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 10;
   padding: 10px;
