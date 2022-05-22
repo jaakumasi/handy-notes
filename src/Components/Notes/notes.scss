@@ -3,11 +3,11 @@ $search_icon_color: rgb(0, 154, 206);
 $menu_icon_active_background: rgb(19, 88, 179);
 
 .notes_container {
-    height: 50vh;
+    // height: 50vh;
     min-height: 100vh;
     overflow: hidden;
     .container {
-        position: relative;
+        position: relative!important;
         height: 100vh;
         max-width: 55%;
         overflow: hidden;
@@ -61,7 +61,7 @@ $menu_icon_active_background: rgb(19, 88, 179);
                     border-radius: 4px;
                     padding: 5px;
                     @media screen and (max-width: 768px) {
-                        margin-left: 0px;
+                        margin-left: 25px;
                         margin-right: 10px;
                     }
                     &:active {

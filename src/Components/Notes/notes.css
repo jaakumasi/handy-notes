@@ -1,11 +1,10 @@
 .notes_container {
-  height: 50vh;
   min-height: 100vh;
   overflow: hidden;
 }
 
 .notes_container .container {
-  position: relative;
+  position: relative !important;
   height: 100vh;
   max-width: 55%;
   overflow: hidden;
@@ -100,7 +99,7 @@
 
 @media screen and (max-width: 768px) {
   .notes_container .container .header .user_and_menu_icon .menu_icon {
-    margin-left: 0px;
+    margin-left: 25px;
     margin-right: 10px;
   }
 }
