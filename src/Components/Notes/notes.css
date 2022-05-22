@@ -263,7 +263,7 @@
   position: absolute;
   bottom: calc(1.5vh);
   right: 25px;
-  opacity: 90%;
+  opacity: 0.9;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
