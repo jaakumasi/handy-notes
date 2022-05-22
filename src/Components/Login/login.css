@@ -149,6 +149,12 @@
   font-size: 95%;
 }
 
+@media screen and (max-width: 768px) {
+  .login_container .login_form .input_section .signup_div {
+    font-size: 75%;
+  }
+}
+
 .login_container .login_form .input_section .signup_div span {
   font-weight: 400;
   font-size: 110%;
