@@ -261,7 +261,7 @@
 
 .notes_container .container .add_note {
   position: absolute;
-  bottom: calc(1.5vh);
+  bottom: calc(2vh);
   right: 25px;
   opacity: 0.9;
   width: -webkit-fit-content;
