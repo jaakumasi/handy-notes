@@ -98,7 +98,6 @@
 
 @media screen and (max-width: 768px) {
   .notes_container .container .header .user_and_menu_icon .menu_icon {
-    margin-left: 25px;
     margin-right: 10px;
   }
 }
