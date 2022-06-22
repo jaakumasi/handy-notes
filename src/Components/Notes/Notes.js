@@ -8,7 +8,7 @@ import Modal from 'react-bootstrap/Modal'
 import Toast from 'react-bootstrap/Toast'
 import Spinner from 'react-bootstrap/Spinner'
 import Note from '../Note/Note'
-import { FaBookReader, FaSearch, FaTelegram, FaSmile, FaGrinWink } from 'react-icons/fa'
+import { FaBookReader, FaSearch, FaTelegram FaGrinWink } from 'react-icons/fa'
 import { IoMdMenu, IoMdArrowDropdown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion/dist/framer-motion'
@@ -239,7 +239,6 @@ export default function Notes({ sortNotes }) {
                                 <Form.Control type='text' placeholder='search notes' onChange={handleSearch} />
                             </Form>
                         </div>
-                        <div><FaSmile /></div>
                         <div className='user_and_menu_icon col-lg-4 col-md-4 col-sm-6 col-6'>
                             <span className='user_name'>| {userName.charAt(0).toUpperCase() + userName.substring(1, 11).toLowerCase()}</span>
                             <IoMdMenu className='menu_icon' onClick={() => {
