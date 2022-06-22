@@ -240,7 +240,7 @@ export default function Notes({ sortNotes }) {
                             </Form>
                         </div>
                         <div className='user_and_menu_icon col-lg-4 col-md-4 col-sm-6 col-6'>
-                            <span className='user_name'>| {userName.charAt(0).toUpperCase() + userName.substring(1, 11).toLowerCase()}</span>
+                            <span className='user_name'>| {userName.charAt(0).toUpperCase() + userName.substring(1, 10).toLowerCase()}</span>
                             <IoMdMenu className='menu_icon' onClick={() => {
                                 let menu = document.querySelector('.menu');
                                 if (menu.classList.contains('active')) menu.classList.remove('active');
