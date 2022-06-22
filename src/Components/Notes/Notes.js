@@ -281,7 +281,7 @@ export default function Notes({ sortNotes }) {
                                 }
                             </div>
                             {/* also show add note button at buttom-right of screen */}
-                            <Button className='add_note' onClick={() => setShowAddModal(true)}>Add note</Button>
+                            <Button className='add_note' onClick={() => setShowAddModal(true)}>+</Button>
                         </>
                     }
                 </Row>

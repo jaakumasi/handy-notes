@@ -261,16 +261,25 @@
 
 .notes_container .container .add_note {
   position: absolute;
-  bottom: calc(2vh);
+  bottom: calc(5vh);
   right: 25px;
   opacity: 0.9;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 40px;
+  height: 40px;
   background-color: #3b75f1;
   font-family: 'noto sans regular';
-  border-radius: 5px;
-  padding: 5px 25px;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 7px #666;
+          box-shadow: 0px 0px 7px #666;
+  border-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .notes_container .container .add_note {
+    position: fixed;
+  }
 }
 
 .notes_container .container .add_note:active {
